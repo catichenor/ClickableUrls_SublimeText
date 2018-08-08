@@ -8,6 +8,14 @@ A plugin for [Sublime Text 2 and 3](http://sublimetext.com)
 
 **Breaking change! The `open_url` command is named `open_url_under_cursor` since v1.3.0 to avoid conflict with the built-in command with the same name. Please update your configuration if you've made custom bindings.**
 
+This fork has modified the above `URL_REGEX` to accomodate Apple Radar URLs, changing:
+
+```text
+\\bhttps?://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]
+-to-
+\\b(https?|rdar)://[-A-Za-z0-9+&@#/%?=~_()|!:,.;']*[-A-Za-z0-9+&@#/%=~_(|]
+```
+
 ## Summary
 
 This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke (`Cmd+Option+Enter` by default).
